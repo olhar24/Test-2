@@ -1,0 +1,220 @@
+//example 1://
+
+let i = 7;
+while (i) {
+    console.log (i--);
+}
+/*ответ: 
+7 6 5 4 3 2 1*/
+
+//example 2://
+
+let i = 7;
+while (i) {
+    console.log (i--);
+}
+console.log(i);
+
+/*ответ: 
+7 6 5 4 3 2 1 0*/
+
+//example 3://
+
+let w = 0;
+while (++w <5) {
+    console.log(w);
+}
+
+/*ответ: 
+1 2 3 4 */
+
+
+//example 4://
+
+let q = 0;
+while (q++ <5) {
+    console.log(q);
+}
+
+/*ответ: 
+1 2 3 4 5 */
+
+//example 5://
+
+function checkAge(age) {
+    if (age > 18) {
+        return true;
+    } else {
+        return console.log('батьки дозволили');
+    }
+}
+checkAge(20);
+
+
+//example 6://
+
+function checkAge(age) {
+    if (age > 18) {
+        return true;
+    } 
+        return console.log('батьки дозволили');
+    }
+checkAge(10);
+
+
+//example 7://
+
+let j = 0;
+while (j != 10) {
+    j += 0.2;
+}
+
+// бесконечный цикл, потому что не будет целого числа // 
+
+//example 8://
+
+for (let i= 1; i < 5; i++) {
+    if (i === 3) continue;   // 3 пропускаем и переходим с помощью continue к цикло//
+    console.log(i);
+}
+
+// result: 1 2 4  //
+
+
+//example 9://
+
+var a = 10;
+do {
+    a += 1;
+    console.log(a);
+}while (a < 5)
+
+// ответ: 11 //
+
+
+
+//example 10://
+
+var a = 10;
+if (a) {
+    let a = 3;
+    a *= a; // a = a * a
+}
+    console.log(a);
+
+    // ответ 10  - потому что он не может достучаться до 
+
+
+//example 11://
+
+function sum (num1, num2 = num1) {
+    console.log(num1 + num2);
+}
+sum(10);
+
+//ответ 20 //
+
+
+
+
+function random(min, max) {
+    return min + Math.random() * (max - min);
+}
+
+console.log(random(1, 5));
+
+
+
+
+
+//вариант с не целым числом
+
+  function random(min, max) {
+    return min + Math.random() * (max - min + 1);
+}
+let count = 10;
+for (i = 0; i < 10; i++) {
+    console.log(random(100, 1000));
+}
+
+
+// пробуем с целым числом
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+let count = 10;
+for (i = 0; i < 10; i++) {
+    console.log(random(100, 1000));
+}
+
+/// работает ///
+
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+count = 10;
+for (i = 0; i < 10; i++) {
+    console.log(random(100, 1000));
+}
+var result = random
+var evenCount = 0;
+var oddCount = 0;
+for (var i = 0; i < result; i++){
+if ( result % 2 === 0) {
+    console.log("парних: " + evenCount++);
+} else {
+    console.log("непарних: " + oddCount++);
+}
+}
+
+
+
+// вариант Юли
+var random;
+var evenCount = 0;
+var oddCount = 0;
+var count = 10;
+function random(min, max) {
+    for (i = 0; i < 10; i++) {
+    random =  Math.floor(Math.random() * (max - min + 1)) + min;
+    if ( random % 2 === 0) {
+        console.log("парних: " + evenCount++);
+    } else {
+        console.log("непарних: " + oddCount++);
+    }
+    }
+}
+random (100, 1000)
+
+
+
+var random;
+var evenCount = 0;
+var oddCount = 0;
+var count = 10;
+function random(min, max) {
+    for (i = 0; i < 10; i++) {
+    random =  Math.floor(Math.random() * (max - min + 1)) + min;
+    if ( random % 2 === 0) {
+        console.log("парних: " + evenCount++);
+    } else {
+        console.log("непарних: " + oddCount++);
+    }
+    var result = (evenCount / oddCount) * 100
+    console.log( "співвідношення парних до непарних: " + result);
+    }
+}
+random (100, 1000)
+
+
+
+
+
+
+
+for (let x = 0; x < 10; x++) {
+    if (x % 2) continue;   // якщо умова справджується, тоді пропускаємо решту тіла циклу і починаємо з наступної ітерації
+    console.log('тільки парні: х = ' + x);
+}
+console.log("Як це ще може виглядати");
